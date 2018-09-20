@@ -151,7 +151,13 @@ body {
   font-family: Roboto;
   font-size: 13px;
 }
-
+.d-link{
+  color: #21242b;
+}
+.d-link:hover,.d-link:focus{
+  color: #21242b;
+  text-decoration: none;
+}
 .currency {
   display: -webkit-box;
   display: -webkit-flex;
@@ -485,9 +491,51 @@ body {
 
 .list-box {
   border: 1px solid rgba(33, 36, 43, 0.1);
-  padding: 10px;
+}
+.list-box .block-title{
+  padding: 10px 10px 0 10px;
+}
+.list-block{
+  height: 358px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.list-block::-webkit-scrollbar-track
+{
+  border-radius: 10px;
+  background-color: transparent;
+  /*border: 2px solid #fff;*/
 }
 
+.list-block::-webkit-scrollbar
+{
+  width: 4px;
+  background-color: transparent;
+}
+
+.list-block::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: rgba(0,0,0,.3);
+}
+.load-more{
+  margin-top: 10px;
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  background-color: #335dff;
+  color: white;
+  text-align: center;
+}
+.load-more:hover{
+  color: white;
+  text-decoration: none;
+}
+.list-block .news-list{
+  padding-right: 10px;
+  padding-left: 10px;
+}
 .news-list {
   position: relative;
   display: -webkit-box;
@@ -547,8 +595,38 @@ section {
   padding-top: 11px;
 }
 
-.ornament {
+.ornament-blue {
+  background: url("../img/icon/blue.png");
+  width: 34px;
+  height: 13px;
+  margin-right: 5px;
+}
+.ornament-red{
+  background: url("../img/icon/red.png");
+  width: 34px;
+  height: 13px;
+  margin-right: 5px;
+}
+.ornament-green{
   background: url("../img/icon/green.png");
+  width: 34px;
+  height: 13px;
+  margin-right: 5px;
+}
+.ornament-violet{
+  background: url("../img/icon/violet.png");
+  width: 34px;
+  height: 13px;
+  margin-right: 5px;
+}
+.ornament-black{
+  background: url("../img/icon/Black.png");
+  width: 34px;
+  height: 13px;
+  margin-right: 5px;
+}
+.ornament-yellow{
+  background: url("../img/icon/yellow.png");
   width: 34px;
   height: 13px;
   margin-right: 5px;
@@ -984,14 +1062,17 @@ h1.block-title {
 
 .article-box h1.block-title {
   text-align: left;
-  font-family: Lato;
-  font-size: 36px;
+  font-family: Lato!important;
+  font-size: 35px;
   font-weight: 900;
   text-transform: none;
   margin-bottom: 10px;
   color: #21242b;
 }
-
+.article-box img{
+  width: 100%;
+  margin-bottom: 15px;
+}
 .article-box .info-stat-black {
   margin: 10px 0  25px 0;
 }
@@ -1032,7 +1113,7 @@ h1.block-title {
 }
 
 .article-text p {
-  font-family: Lato;
+  font-family: Lato!important;
   font-size: 15px;
   font-weight: normal;
   line-height: 1.33;
@@ -1213,10 +1294,13 @@ form.comment-form button {
     padding-top: 4px;
   }
   .currency {
-    margin: 10px 0 10px -41px;
+    margin: 10px 0 10px 0px;
   }
   .currency li {
     padding: 0 5px;
+  }
+  .w-list{
+    min-width: 130px;
   }
   .social {
     margin-left: -10px;
