@@ -118,7 +118,14 @@ body {
   height: 10px;
   margin-right: 5px;
 }
-
+.cloud-white {
+  background-image: url("../img/icon/cloud-white.png");
+  width: 15px;
+  height: 14px;
+  margin-right: 5px;
+  margin-bottom: -2px;
+  background-size: 100%;
+}
 .fb {
   background-image: url("../img/icon/fb.png");
   width: 24px;
@@ -232,7 +239,19 @@ body {
 .menu li a:hover {
   text-decoration: none;
 }
-
+.menu-fixed .menu{
+  display: block;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+.menu-fixed .menu li a{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  padding: 4px 0;
+}
+.menu-fixed .menu li a:hover{
+  color: white;
+}
 .search, .btn-burger {
   margin-top: 40px;
   border: none;
@@ -347,33 +366,33 @@ body {
   right: 0;
   height: 100%;
   width: 25%;
-  background-color: white;
-  padding: 150px 20px 20px 60px;
+  padding: 50px 20px 20px 40px;
 }
 
 .menu-fixed .nav-info {
+  margin-top: 20px;
   -webkit-column-count: 1;
      -moz-column-count: 1;
           column-count: 1;
 }
 
 .menu-fixed .nav-info li a {
-  color: #21242b;
+  color: rgba(255, 255, 255, 0.8);
   opacity: 1;
   font-weight: bold;
 }
 
 .menu-fixed .nav-info li a:hover {
-  color: #335dff;
+  color: white;
 }
 
 .close {
   background-color: transparent;
   border: none;
   outline: none;
-  position: fixed;
-  right: 3%;
-  top: 5%;
+  /*position: fixed;*/
+  /*right: 3%;*/
+  /*top: 5%;*/
   opacity: 1;
   z-index: 1;
 }
@@ -381,7 +400,44 @@ body {
 .close:focus {
   outline: none;
 }
+.top-fix{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+.top-fix img{
+  width: 90%;
+}
+.list-fix{
+  overflow: auto;
+  height: calc(100% - 120px);
+  margin-right: -16px;
+  padding-right: 20px;
+}
+.list-fix::-webkit-scrollbar-track
+{
+  border-radius: 10px;
+  background-color: transparent;
+  /*border: 2px solid #fff;*/
+}
 
+.list-fix::-webkit-scrollbar
+{
+  width: 4px;
+  background-color: transparent;
+}
+
+.list-fix::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  /*background-color: rgba(0,0,0,.3);*/
+  background-color: white;
+}
 .clock-white {
   background-image: url("../img/icon/clock-white.png");
   width: 14px;
@@ -1269,6 +1325,15 @@ form.comment-form button {
   .logo img {
     height: 80px;
   }
+  .top-fix{
+    margin-bottom: 10px;
+  }
+  .top-fix img {
+    width: 57%;
+  }
+  .top-fix .logo img{
+    height: 50px;
+  }
   .menu-fixed {
     width: 100%;
   }
@@ -1288,26 +1353,39 @@ form.comment-form button {
     margin-left: 10px;
   }
   .menu-fixed {
-    padding: 80px 20px 20px;
+    padding: 20px 20px 20px;
+  }
+  .list-fix{
+    overflow: auto;
+    height: calc(100% - 200px);
   }
   .weather {
     padding-top: 4px;
   }
+  .weather span{
+    color: white;
+  }
   .currency {
     margin: 10px 0 10px 0px;
+    justify-content: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
   .currency li {
     padding: 0 5px;
+    color: white;
   }
   .w-list{
     min-width: 130px;
   }
   .social {
     margin-left: -10px;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .social li {
     margin-right: 10px;
@@ -1319,8 +1397,10 @@ form.comment-form button {
   .search-item {
     position: static;
     width: 100%;
-    border: 1px solid rgba(33, 36, 43, 0.42);
+    border: 1px solid rgba(255, 255, 255, 0.8);
     padding: 6px 10px;
+    background-color: transparent;
+    color: white;
   }
   .menu {
     margin-top: 0;
